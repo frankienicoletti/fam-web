@@ -41,30 +41,6 @@ export const Statements = props => {
         title="checking - 3456"
         balance="1200"
       />
-      <InvestmentsBlock
-        title="checking - 3456"
-        balance="1200"
-      />
-      <InvestmentsBlock
-        title="checking - 3456"
-        balance="1200"
-      />
-      <InvestmentsBlock
-        title="checking - 3456"
-        balance="1200"
-      />
-      <InvestmentsBlock
-        title="checking - 3456"
-        balance="1200"
-      />
-      <InvestmentsBlock
-        title="checking - 3456"
-        balance="1200"
-      />
-      <InvestmentsBlock
-        title="checking - 3456"
-        balance="1200"
-      />
     </Row>
   );
 };

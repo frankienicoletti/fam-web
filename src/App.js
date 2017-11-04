@@ -3,6 +3,7 @@ import './App.css';
 import { Row, Col } from 'react-bootstrap';
 import { Title, Footer } from './components';
 // pages
+import Accounts from './Pages/Accounts';
 import Statements from './Pages/Statements';
 
 class App extends Component {
