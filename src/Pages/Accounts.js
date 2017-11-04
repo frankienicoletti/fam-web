@@ -22,7 +22,7 @@ const SavingsBlock = AccountBlock('Savings');
 const CreditCardsBlock = AccountBlock('Credit Cards');
 const InvestmentsBlock = AccountBlock('Investments');
 
-export const Statements = props => {
+export const Accounts = props => {
   return (
     <Row className="balances-page">
       <CheckingBlock
@@ -45,4 +45,4 @@ export const Statements = props => {
   );
 };
 
-export default Statements;
+export default Accounts;
