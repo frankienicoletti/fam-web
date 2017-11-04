@@ -1,0 +1,15 @@
+.Rewards {
+  padding: 0.8em;
+  background-color: #fff;
+  font-size: 1.2em;
+  border: 0.5px solid #ddd;
+  display: block;
+  overflow: auto;
+
+  .amount {
+    float: right;
+    font-weight: bold;
+    margin-right: 1em;
+  }
+}
+
