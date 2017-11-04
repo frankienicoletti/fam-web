@@ -1,0 +1,17 @@
+.details-title,
+.details-date,
+.details-amount {
+  margin: 0;
+}
+
+.details-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #999;
+}
+
+.details-right-section {
+  display: flex;
+  justify-content: flex-end;
+}
