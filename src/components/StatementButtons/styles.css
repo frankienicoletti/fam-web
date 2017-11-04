@@ -1,0 +1,13 @@
+.btn-group-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px; }
+
+.btn-inactive,
+.btn-inactive:hover,
+.btn-inactive:focus,
+.btn-inactive:active {
+  background: none;
+  border-color: #2a6497;
+  color: #2a6497;
+  text-shadow: none; }
