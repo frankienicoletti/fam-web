@@ -3,14 +3,19 @@
   justify-content: center;
   align-items: flex-start;
   border-top: 1px solid #999;
-  border-bottom: 1px solid #999; }
+  height: 50px; }
 
 .footer-btn {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 5px;
-  align-items: center; }
+  align-items: center;
+  height: 100%;
+  border-right: 1px solid #999; }
+
+.footer-btn:last-of-type {
+  border-right: none; }
 
 .footer-btn-text {
   margin: 0;

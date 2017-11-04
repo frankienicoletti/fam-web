@@ -4,7 +4,7 @@ import './styles.css';
 
 const Block = props => {
   return (
-    <Row className="block">
+    <Row className="block no-margin">
       <Col
         className="block-left-section"
         xs={8}

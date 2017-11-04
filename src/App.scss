@@ -1,3 +1,27 @@
+.html,
+.root,
+.app,
+body {
+  height: 100vh;
+}
+
 p {
   font-size: 15px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.app-body {
+  flex: 1;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.no-margin {
+  margin: 0;
 }
