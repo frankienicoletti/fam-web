@@ -1,0 +1,31 @@
+.block {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.block-left-section {
+
+}
+
+.block-right-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.block-title {
+  color: #888;
+  margin: 0;
+}
+
+.block-balance {
+  color: #339af4;
+  font-size: 25px;
+  margin: 2px 0;
+  font-weight: 200;
+}
+
+.block-link {
+  color: #888;
+}
