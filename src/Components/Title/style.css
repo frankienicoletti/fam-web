@@ -1,0 +1,14 @@
+.Title {
+  padding: 0.8em 1em;
+  background-color: #428bca;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center; }
+  .Title .back {
+    float: left;
+    line-height: inherit; }
+  .Title .search {
+    float: right;
+    line-height: inherit; }
+  .Title .content {
+    display: inline; }
