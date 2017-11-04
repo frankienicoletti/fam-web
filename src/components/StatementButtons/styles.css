@@ -1,6 +1,7 @@
 .btn-group-wrapper {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  padding: 20px; }
 
 .btn-inactive,
 .btn-inactive:hover,

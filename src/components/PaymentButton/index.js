@@ -7,7 +7,7 @@ const PaymentButton = props => {
     <div className="payment-button-wrapper">
       <Button
         {...props}
-        clasName="payment-button"
+        className="payment-button"
         bsStyle="primary"
         bsSize="large"
       >
