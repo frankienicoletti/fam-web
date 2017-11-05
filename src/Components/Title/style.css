@@ -12,4 +12,5 @@
     float: right;
     line-height: inherit; }
   .Title .content {
+    text-transform: capitalize;
     display: inline; }
