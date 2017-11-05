@@ -1,10 +1,16 @@
 .trivia-modal {
-  background-color: rgba(255, 104, 37, 0.8);
+  background-color: rgba(255, 104, 37, 0.89);
   height: 100vh;
   color: #fff;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  font-size: 1.4em;
+  text-shadow: 2px 1px 1px #333;
+}
+
+.trivia-modal p {
+  font-size: 1.1em;
 }
 
 .trivia-timer {
@@ -14,14 +20,9 @@
   text-align: center;
 }
 
-.trivia-questions {
-
-}
-
 .trivia-title p {
-  font-size: 18px;
   text-align: center;
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
 }
 
 .trivia-buttons {

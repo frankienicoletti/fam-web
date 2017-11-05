@@ -20,13 +20,18 @@ const AccountBlock = subtitle => props => {
 };
 
 const CheckingBlock = AccountBlock('Checking');
+const LauncherBlock = AccountBlock('Launcher');
 
 export const Accounts = props => {
   return (
     <Row className="balances-page">
+      <CheckingBlock
+        title="checking - 1245"
+        balance={456.45}
+      />
       <Link to="/statements">
-        <CheckingBlock
-          title="Checking - 3456"
+        <LauncherBlock
+          title="Launchers - 3456"
           balance={props.balance}
         />
       </Link>
