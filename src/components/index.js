@@ -15,6 +15,7 @@ import Portal from './Portal';
 import RewardsModal from './RewardsModal';
 import PaymentBlock from './PaymentBlock';
 import Calculator from './Calculator';
+import TriviaModal from './TriviaModal';
 
 export {
   Hero,
@@ -33,5 +34,6 @@ export {
   Portal,
   RewardsModal,
   PaymentBlock,
-  Calculator
+  Calculator,
+  TriviaModal
 }
