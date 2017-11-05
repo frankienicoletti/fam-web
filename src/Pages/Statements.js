@@ -2,45 +2,13 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import {
   Subtitle,
-  Block,
   Details,
   Redeem,
-  Filter
+  Filter,
+  StatementButtons
 } from '../components';
-import { numberWithCommas } from '../utils/numberWithCommas';
 import Balance from "../components/Balance/index";
 import PaymentButton from "../components/PaymentButton/index";
-import StatementButtons from "../components/StatementButtons/index";
-
-const creditInfo = () => {
-  return (
-    <Row>
-      <Col>
-        <Details
-          title="Available Credit For Purchase"
-          amount={1200}
-        />
-        <Details
-          title="Minimum Payment Due"
-          amount={100}
-        />
-        <Details
-          title="Last Statement Balance"
-          amount={345}
-        />
-        <Details
-          title="Reward Points"
-          amount={30}
-        />
-        <Filter title="Transaction"/>
-        <StatementButtons
-          btn1Text="Since Last Statement"
-          btn2Text="Statements"
-        />
-      </Col>
-    </Row>
-  );
-};
 
 const pendingTransactions = () => {
   return (
@@ -97,9 +65,12 @@ export const Statements = props => {
       <Col xs={12}>
         <Balance balance={34.54}/>
         <PaymentButton title="Make a Payment"/>
-        {creditInfo()}
-        <Redeem/>
         {pendingTransactions()}
+        <Filter title="Transaction"/>
+        <StatementButtons
+          btn1Text="Since Last Statement"
+          btn2Text="Statements"
+        />
         {dayTransactions()}
       </Col>
     </Row>

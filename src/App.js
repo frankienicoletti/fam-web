@@ -21,8 +21,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="app container">
+          <div className="modal-hook"/>
           <div className="app-header">
-              <TitleWithProps/>
+            <TitleWithProps/>
           </div>
           <Row className="app-body">
             <Col xs={12} className="app-body-wrapper">
