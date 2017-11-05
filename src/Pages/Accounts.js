@@ -2,7 +2,6 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import {
   Link,
-  NavLink,
 } from 'react-router-dom';
 import { Subtitle, Block } from '../components';
 import { numberWithCommas } from '../utils/numberWithCommas';
@@ -31,21 +30,21 @@ export const Accounts = props => {
     <Row className="balances-page">
       <Link to="/statements">
         <CheckingBlock
-          title="checking - 3456"
-          balance="1200"
+          title="Checking - 3456"
+          balance="12.23"
         />
       </Link>
       <SavingsBlock
-        title="checking - 3456"
-        balance="1200"
+        title="Savings - 3456"
+        balance="34.43"
       />
       <CreditCardsBlock
-        title="checking - 3456"
-        balance="1200"
+        title="Credit card - 3456"
+        balance="14.43"
       />
       <InvestmentsBlock
-        title="checking - 3456"
-        balance="1200"
+        title="Investment - 3456"
+        balance="386.54"
       />
     </Row>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import 'font-awesome/css/font-awesome.css';
 import './styles.css';
 import classnames from 'classnames';

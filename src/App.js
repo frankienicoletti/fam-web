@@ -12,7 +12,7 @@ import Accounts from './Pages/Accounts';
 import Statements from './Pages/Statements';
 import Rewards from './Pages/Rewards';
 import Settings from './Pages/Settings';
-import Confirmation from './Pages/Confirmation';
+import Confirmation from './Pages/Confirmation/index';
 
 const TitleWithProps = withRouter(Title);
 

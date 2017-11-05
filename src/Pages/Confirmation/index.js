@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import PaymentBlock from '../components/PaymentBlock';
-import { numberWithDollarSign } from '../utils/numberWithCommas';
-import { SendMoneyButton, Details, Subtitle, Portal } from '../components';
+import PaymentBlock from '../../components/PaymentBlock/index';
+import { numberWithDollarSign } from '../../utils/numberWithCommas';
+import { SendMoneyButton, Details, Subtitle, RewardsModal} from '../../components';
+import goldCup from '../../images/silver-cup.png'
+import './styles.css';
 
 const creditInfo = () => {
   return (
@@ -38,13 +40,10 @@ class Confirmation extends Component {
     return (
       <Row className="confirmation-page">
         {this.state.showModal &&
-        <Portal onClick={() => this.setState({ showModal: false })}>
-          <div className="rewards-modal-wrapper">
-            <div className="rewards-modal">
-              these are your rewards
-            </div>
-          </div>
-        </Portal>
+        <RewardsModal
+          onClick={() => this.setState({ showModal: false })}
+          image={goldCup}
+        />
         }
         <Col xs={12}>
           <Subtitle subtitle="Send Payment"/>

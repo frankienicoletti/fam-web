@@ -9,6 +9,7 @@ const RewardsCard = props => {
         <img
           className="img-responsive"
           src={props.image || 'http://placehold.it/450x300'}
+          alt="rewards"
         />
       </Col>
       <Col xs={8}>

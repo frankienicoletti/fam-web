@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import './styles.css';
+import { numberWithDollarSign } from "../../utils/numberWithCommas";
 
 const Block = props => {
   return (
@@ -10,7 +11,7 @@ const Block = props => {
         xs={8}
       >
         <p className="block-title">{props.title}</p>
-        <p className="block-balance">{props.balance}</p>
+        <p className="block-balance">{numberWithDollarSign(props.balance)}</p>
       </Col>
       <Col
         className="block-right-section"
