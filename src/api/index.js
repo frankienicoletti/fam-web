@@ -22,6 +22,7 @@ const getAccountTransactions = id => {
 
 // Returns payoff data from the API
 const payoff = (id, body) => {
+  console.log(id, body)
   return fetch(`${API}/${id}/payoff`, {
     method: 'post',
     body: JSON.stringify(body)

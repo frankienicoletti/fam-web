@@ -24,8 +24,8 @@ const FormGroupInstance = (props) => {
       </Col>
       <Col xs={12}>
         <Slider
-          min={0}
-          max={100}
+          min={props.min}
+          max={props.max}
           value={props.value}
           onChange={(e) => props.handleChange(e, props.name)}
         />
@@ -37,51 +37,72 @@ const FormGroupInstance = (props) => {
 class Calculator extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      balance: 10,
-      interest_rate: 10,
-      [this.props.month]: 20,
-      submitted: false,
-      data: {}
+    this.initialState = {
+      balance: this.props.user.balance | 0,
+      interest_rate: this.props.user.interest_rate | 0,
+      [this.props.month]: this.props.user.minimum_payment | 0,
+      graph: []
     };
+
+    this.state = this.initialState
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = (value, name) => {
+  handleChange (value, name) {
     value = typeof value === 'object' ? value.target.value : value;
     this.setState({ [name]: +value });
   };
 
-  handleSubmit = e => {
+  handleSubmit (e) {
     e.preventDefault();
-    payoff(this.props.userId, this.state)
-      .then(json => {
-        this.setState({
-          ...this.state,
-          json
-        });
-      })
-      .catch(err => {
-        console.log('error :\n', err);
-      })
+    payoff(this.props.user.userId, this.state)
+    .then(json => {
+      this.setState(json);
+    })
+    .catch(err => {
+      console.log('error :\n', err);
+    })
   };
+
+  setInitialState () {
+    for (var key in this.state) {
+      delete this.state[key]
+    }
+    this.setState(this.initialState)
+  }
 
   render() {
     return (
       <div>
         {
-          this.state.submitted
-            ? <Chart data={this.state.data}/>
+          this.state.graph.length
+            ? <div>
+                <Chart data={this.state.graph} />
+                <Col xs={4} className='submit'>
+                  <Button bsStyle="primary" onClick={() => {
+                    this.setInitialState()  
+                  }}>
+                    Back
+                  </Button>
+                </Col>
+              </div>
             : <Form horizontal onSubmit={this.handleSubmit}>
               <FormGroupInstance
                 label={'Current loan balance ($)'}
                 name={'balance'}
                 value={this.state.balance}
-                handleChange={this.handleChange}/>
+                handleChange={this.handleChange}
+                min={25}
+                max={600} />
               <FormGroupInstance
                 label={'Current monthly payment ($)'}
                 name={this.props.month}
                 value={this.state[this.props.month]}
-                handleChange={this.handleChange}/>
+                handleChange={this.handleChange}
+                min={25}
+                max={100}
+                />
 
               <FormGroup>
                 <Col xs={4} className='submit'>

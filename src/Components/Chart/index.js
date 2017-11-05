@@ -18,17 +18,17 @@ const ChartComponent = (props) => {
       title: null
     },
     xAxis: {
-      categories: data.graph.map(el => el.month)
+      categories: data.map(el => el.month)
     },
     series: [{
       name: 'principal',
-      data: data.graph.map(el => el.principal)
+      data: data.map(el => el.principal)
     },{
       name: 'interest',
-      data: data.graph.map(el => el.interest)
+      data: data.map(el => el.interest)
     },{
       name: 'balance',
-      data: data.graph.map(el => el.balance)
+      data: data.map(el => el.balance)
     }]
   };
   
