@@ -3,7 +3,6 @@ import { Col, Row } from 'react-bootstrap';
 import {
   Subtitle,
   Details,
-  Redeem,
   Filter,
   StatementButtons
 } from '../components';
