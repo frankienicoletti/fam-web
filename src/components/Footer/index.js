@@ -1,28 +1,30 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import './styles.css';
 import 'font-awesome/css/font-awesome.css';
+import './styles.css';
 import classnames from 'classnames';
+import { NavLink } from 'react-router-dom';
 
 const FooterBtn = props => {
   return (
-    <Col
-      xs={3}
-      className={classnames('footer-btn', { ['footer-btn-active']: props.active })}
+    <NavLink
+      activeClassName="footer-btn-active"
+      to={props.to}
+      className={classnames('footer-btn col-xs-3')}
     >
       <i className={`fa ${props.icon}`} aria-hidden="true"/>
       <p className="footer-btn-text">{props.text}</p>
-    </Col>
+    </NavLink>
   );
 };
 
 const Footer = props => {
   return (
     <Row className="footer-btn-wrapper">
-      <FooterBtn active icon="fa-bars" text="Accounts"/>
-      <FooterBtn icon="fa-money" text="Move Money"/>
-      <FooterBtn icon="fa-ellipsis-h" text="Services"/>
-      <FooterBtn icon="fa-gear" text="Settings"/>
+      <FooterBtn to="/accounts" icon="fa-bars"/>
+      <FooterBtn to="/calculator" icon="fa-money"/>
+      <FooterBtn to="/rewards" icon="fa-trophy"/>
+      <FooterBtn to="/settings" icon="fa-gear"/>
     </Row>
   );
 };

@@ -12,7 +12,11 @@
   padding: 5px;
   align-items: center;
   height: 100%;
-  border-right: 1px solid #999; }
+  border-right: 1px solid #999;
+  font-size: 2em;
+  text-decoration: none; }
+  .footer-btn:focus {
+    text-decoration: none; }
 
 .footer-btn:last-of-type {
   border-right: none; }
@@ -24,3 +28,5 @@
 .footer-btn-active {
   background-color: #2a6497;
   color: #fff; }
+  .footer-btn-active:hover, .footer-btn-active:focus {
+    color: #fff; }

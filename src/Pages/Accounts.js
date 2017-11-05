@@ -1,5 +1,9 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import {
+  Link,
+  NavLink,
+} from 'react-router-dom';
 import { Subtitle, Block } from '../components';
 import { numberWithCommas } from '../utils/numberWithCommas';
 
@@ -25,10 +29,12 @@ const InvestmentsBlock = AccountBlock('Investments');
 export const Accounts = props => {
   return (
     <Row className="balances-page">
-      <CheckingBlock
-        title="checking - 3456"
-        balance="1200"
-      />
+      <Link to="/statements">
+        <CheckingBlock
+          title="checking - 3456"
+          balance="1200"
+        />
+      </Link>
       <SavingsBlock
         title="checking - 3456"
         balance="1200"
