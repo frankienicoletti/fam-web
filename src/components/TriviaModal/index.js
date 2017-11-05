@@ -4,14 +4,6 @@ import MyPortal from "../Portal/index";
 import { Row, Col } from 'react-bootstrap';
 import './styles.css';
 
-const TriviaTimer = props => {
-  return (
-    <div className="trivia-timer">
-      <span>00:10</span>
-    </div>
-  );
-};
-
 const TriviaTitle = props => {
   return (
     <div className="trivia-title">
@@ -61,7 +53,7 @@ class TriviaModal extends Component {
       correctAnswers: 0,
       questions: [
         {
-          title: 'One Million Dollar Question',
+          title: 'Trivia Questions',
           question: 'Which of the following service providers may use credit scores to decide whether a person can buy a service and/or what price he or she will pay?',
           answers: [
             {
@@ -83,7 +75,7 @@ class TriviaModal extends Component {
           ]
         },
         {
-          title: 'One Million Dollar Question',
+          title: 'Trivia Questions',
           question: 'Who collects the information on which credit scores are most frequently based?\n' +
           'FICO and VantageScore Solutions?',
           answers: [
@@ -106,7 +98,7 @@ class TriviaModal extends Component {
           ]
         },
         {
-          title: 'One Million Dollar Question',
+          title: 'Trivia Questions',
           question: 'Which of the following does a credit score mainly indicate?',
           // *Risk of not repaying the loan*
           answers: [
@@ -198,7 +190,6 @@ class TriviaModal extends Component {
           >
             X
           </span>
-          <TriviaTimer/>
           <TriviaTitle title={question.title}/>
           <TriviaQuestion question={question.question}/>
           <TriviaButtons answers={question.answers}/>
