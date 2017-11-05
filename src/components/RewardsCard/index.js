@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
-import { Hero } from '../../components';
 import './styles.css';
 
 const RewardsCard = props => {

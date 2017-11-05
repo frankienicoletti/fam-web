@@ -23,3 +23,21 @@ p {
 
 .rewards-wrapper {
   padding: 20px; }
+
+.confirmation-button-wrapper {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center; }
+
+.rewards-modal {
+  background: white;
+  width: 100%;
+  margin: 20px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.rewards-modal-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center; }

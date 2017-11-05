@@ -11,6 +11,8 @@ import Subtitle from './Subtitle';
 import Title from './Title';
 import RewardsCard from './RewardsCard';
 import Hero from './Hero';
+import SendMoneyButton from './SendMoneyButton';
+import Portal from './Portal';
 
 export {
   Hero,
@@ -26,4 +28,6 @@ export {
   StatementButtons,
   Subtitle,
   Title,
+  SendMoneyButton,
+  Portal,
 }
