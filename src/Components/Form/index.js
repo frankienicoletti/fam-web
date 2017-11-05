@@ -1,7 +1,7 @@
 import './styles.css';
 import 'react-rangeslider/lib/index.css';
 import React, { Component } from 'react';
-import { Row, Col, Form, FormGroup, ControlLabel, FormControl, Button, Tab } from 'react-bootstrap';
+import { Col, Form, FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 import Slider from 'react-rangeslider';
 import axios from 'axios'
 import Chart from '../Chart';
@@ -82,7 +82,7 @@ class Calculator extends Component {
   }
 
   handleChange (value, name) {
-    value = typeof value == 'object' ? value.target.value : value;
+    value = typeof value === 'object' ? value.target.value : value;
     this.setState({[name]: +value});
   };
 
@@ -111,11 +111,6 @@ class Calculator extends Component {
             label={'Current loan balance ($)'} 
             name={'balance'} 
             value={this.state.balance} 
-            handleChange={this.handleChange} />
-          <FormGroupInstance 
-            label={'Annual percentage interest_rate (0% to 40%)'} 
-            name={'interest_rate'} 
-            value={this.state.interest_rate} 
             handleChange={this.handleChange} />
           <FormGroupInstance 
             label={'Current monthly payment ($)'} 

@@ -14,6 +14,7 @@ import SendMoneyButton from './SendMoneyButton';
 import Portal from './Portal';
 import RewardsModal from './RewardsModal';
 import PaymentBlock from './PaymentBlock';
+import Calculator from './Calculator';
 
 export {
   Hero,
@@ -31,5 +32,6 @@ export {
   SendMoneyButton,
   Portal,
   RewardsModal,
-  PaymentBlock
+  PaymentBlock,
+  Calculator
 }

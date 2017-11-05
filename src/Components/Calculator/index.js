@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, FormGroup, ControlLabel, FormControl, Button, Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab } from 'react-bootstrap';
 import './styles.css';
-import FormInstance from '../Calculator'
-import Chart from '../Chart'
+import FormInstance from '../Form'
 
 class TabsInstance extends Component {  
   render () {
