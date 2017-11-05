@@ -19,7 +19,6 @@ const Block = props => {
         <span className="block-link">></span>
       </Col>
     </Row>
-
   );
 };
 

@@ -2,31 +2,9 @@ import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import PaymentBlock from '../../components/PaymentBlock/index';
 import { numberWithDollarSign } from '../../utils/numberWithCommas';
-import { SendMoneyButton, Details, Subtitle, RewardsModal} from '../../components';
+import { SendMoneyButton, Details, Subtitle, RewardsModal } from '../../components';
 import goldCup from '../../images/silver-cup.png'
 import './styles.css';
-
-const creditInfo = () => {
-  return (
-    <Row>
-      <Col>
-        <Subtitle subtitle="Credit Info"/>
-        <Details
-          title="Available Credit For Purchase"
-          amount={1200}
-        />
-        <Details
-          title="Minimum Payment Due"
-          amount={100}
-        />
-        <Details
-          title="Reward Points"
-          amount={30}
-        />
-      </Col>
-    </Row>
-  );
-};
 
 class Confirmation extends Component {
   constructor() {
@@ -37,6 +15,7 @@ class Confirmation extends Component {
   }
 
   render() {
+    console.log('Confirmation:\n', this.props);
     return (
       <Row className="confirmation-page">
         {this.state.showModal &&
@@ -53,7 +32,7 @@ class Confirmation extends Component {
 
           <PaymentBlock title="to">
             <p>Checking account</p>
-            <small>Current Balance $23.34</small>
+            <small>{numberWithDollarSign(this.props.balance) || 0}</small>
           </PaymentBlock>
 
           <PaymentBlock title="amount">
@@ -63,7 +42,25 @@ class Confirmation extends Component {
           <PaymentBlock title="date">
             <input type="date"/>
           </PaymentBlock>
-          {creditInfo()}
+          <Row>
+            <Col>
+              <Subtitle subtitle="Credit Info"/>
+              <Details
+                title="Available Credit For Purchase"
+                amount={this.props.credit_limit}
+              />
+              <Details
+                noMoney
+                title="Minimum Payment Due"
+              >
+                {new Date(this.props.due_date).toLocaleString()}
+              </Details>
+              <Details
+                title="Reward Points"
+                amount={30}
+              />
+            </Col>
+          </Row>
           <div className="confirmation-button-wrapper">
             <SendMoneyButton
               onClick={() => this.setState({ showModal: true })}

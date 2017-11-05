@@ -9,7 +9,7 @@ export default (props) => {
 
   return (
     <div className="Title">
-      <NavLink to="/account">
+      <NavLink to="/accounts">
         <i className="fa fa-chevron-left back" aria-hidden="true"/>
       </NavLink>
       <span className="content">{title}</span>
