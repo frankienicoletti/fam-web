@@ -12,6 +12,7 @@ import Accounts from './Pages/Accounts';
 import Statements from './Pages/Statements';
 import Rewards from './Pages/Rewards';
 import Settings from './Pages/Settings';
+import Calculator from './Pages/Calculator';
 import Confirmation from './Pages/Confirmation/index';
 
 const TitleWithProps = withRouter(Title);
@@ -30,6 +31,7 @@ class App extends Component {
               <Route exact path="/" component={Confirmation}/>
               <Route path="/account" component={Accounts}/>
               <Route path="/accounts" component={Accounts}/>
+              <Route path="/calculator" component={Calculator}/>
               <Route path="/statements" component={Statements}/>
               <Route path="/settings" component={Settings}/>
               <Route path="/rewards" component={Rewards}/>
