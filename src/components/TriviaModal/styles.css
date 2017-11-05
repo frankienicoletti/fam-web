@@ -38,3 +38,16 @@
 
 .trivia-status {
   display: flex; }
+
+.trivia-modal.rewards {
+  background: url("../../images/confeti.png") rgba(0, 183, 233, 0.7);
+  text-align: center; }
+
+.rewards-cup {
+  max-width: 200px;
+  margin: 0 auto; }
+
+.correct-answer {
+  margin-top: 244px;
+  text-align: center;
+  margin-bottom: 9px; }

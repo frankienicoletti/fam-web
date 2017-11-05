@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
-import { Portal } from '../Portal';
 import MyPortal from "../Portal/index";
 import { Row, Col } from 'react-bootstrap';
+import goldCup from '../../images/gold-cup.png';
+import silverCup from '../../images/silver-cup.png';
+import bronzeCup from '../../images/bronze-cup.png';
 import './styles.css';
+
+const prizeImg = {
+  1: {
+    img: bronzeCup,
+  },
+  2: {
+    img: silverCup
+  },
+  3: {
+    img: goldCup
+  }
+};
 
 const TriviaTitle = props => {
   return (
@@ -168,14 +182,30 @@ class TriviaModal extends Component {
     const question = this.state.questions[this.state.currentQuestionNo];
     const isLastQuestion = this.state.currentQuestionNo === 3;
 
+    const getPrizeImage = (correctQuestions) => {
+      if (prizeImg[correctQuestions]) {
+        return prizeImg[correctQuestions].img;
+      }
+
+      return null;
+    };
     if (isLastQuestion) {
+      const correctAnswers = this.state.correctAnswers;
+      const image = getPrizeImage(correctAnswers);
       return (
         <MyPortal>
           <div
-            className="trivia-modal"
+            className="trivia-modal rewards"
             onClick={this.props.closeModal}
           >
-            You answered {this.state.correctAnswers} correctly!
+            <p className="correct-answer">You answered {this.state.correctAnswers}
+               questions correctly!
+            </p>
+            {this.state.correctAnswers > 0 &&
+            <p>you earned {this.state.correctAnswers * 20} points</p>}
+
+            {!!correctAnswers &&
+            <img className="img-responsive rewards-cup" src={image} alt="cup"/>}
           </div>
         </MyPortal>
       )
