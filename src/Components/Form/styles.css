@@ -1,0 +1,14 @@
+#calculator {
+  font-size: 1.2em; }
+  #calculator .nav.nav-tabs {
+    padding: 2em 2em 0 2em; }
+  #calculator .form-group {
+    padding: 0.5em; }
+  #calculator .form-horizontal {
+    padding: 2em; }
+  #calculator .submit {
+    float: right; }
+  #calculator .radiogroup {
+    padding-bottom: 1em; }
+  #calculator label {
+    font-weight: bold; }

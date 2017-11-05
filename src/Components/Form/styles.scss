@@ -1,0 +1,27 @@
+#calculator {
+  font-size: 1.2em;
+
+  .nav.nav-tabs {
+    padding: 2em 2em 0 2em;
+  }
+
+  .form-group {
+    padding: 0.5em;
+  }
+
+  .form-horizontal {
+    padding: 2em;
+  }
+  
+  .submit {
+    float: right;
+  } 
+
+  .radiogroup {
+    padding-bottom: 1em;
+  }
+
+  label {
+    font-weight: bold;
+  }
+}
