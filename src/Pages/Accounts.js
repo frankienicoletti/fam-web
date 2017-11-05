@@ -4,7 +4,7 @@ import {
   Link,
 } from 'react-router-dom';
 import { Subtitle, Block } from '../components';
-import { numberWithCommas } from '../utils/numberWithCommas';
+import { numberWithCommas, numberWithDollarSign } from '../utils/numberWithCommas';
 
 const AccountBlock = subtitle => props => {
   return (
@@ -14,7 +14,7 @@ const AccountBlock = subtitle => props => {
       />
       <Block
         title={props.title}
-        balance={props.balance && numberWithCommas(props.balance)}
+        balance={props.balance}
       />
     </Col>
   );
@@ -31,21 +31,9 @@ export const Accounts = props => {
       <Link to="/statements">
         <CheckingBlock
           title="Checking - 3456"
-          balance="12.23"
+          balance={props.balance}
         />
       </Link>
-      <SavingsBlock
-        title="Savings - 3456"
-        balance="34.43"
-      />
-      <CreditCardsBlock
-        title="Credit card - 3456"
-        balance="14.43"
-      />
-      <InvestmentsBlock
-        title="Investment - 3456"
-        balance="386.54"
-      />
     </Row>
   );
 };

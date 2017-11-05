@@ -15,7 +15,8 @@ const Details = props => {
         <p
           className={classnames('details-amount', { 'details-paid': props.paid })}
         >
-          {numberWithDollarSign(props.amount)}
+          {props.amount && numberWithDollarSign(props.amount)}
+          {props.children}
         </p>
         {props.pending && <p className="details-pending">
           pending

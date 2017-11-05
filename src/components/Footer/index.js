@@ -10,7 +10,7 @@ const FooterBtn = props => {
     <NavLink
       activeClassName="footer-btn-active"
       to={props.to}
-      className={classnames('footer-btn col-xs-3')}
+      className={classnames('footer-btn col-xs-4')}
     >
       <i className={`fa ${props.icon}`} aria-hidden="true"/>
       <p className="footer-btn-text">{props.text}</p>
@@ -24,7 +24,6 @@ const Footer = props => {
       <FooterBtn to="/accounts" icon="fa-bars"/>
       <FooterBtn to="/calculator" icon="fa-money"/>
       <FooterBtn to="/rewards" icon="fa-trophy"/>
-      <FooterBtn to="/settings" icon="fa-gear"/>
     </Row>
   );
 };
