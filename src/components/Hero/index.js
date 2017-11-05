@@ -11,7 +11,7 @@ const HeroBtn = props => {
   );
 };
 
-const Hero = () => {
+const Hero = props => {
   return (
     <Row className="hero">
       <Col xs={8}>
@@ -21,6 +21,7 @@ const Hero = () => {
         <p className="hero-text">
           Redeem your Capital One Rewards!
         </p>
+        <p className="hero-points">{props.points} points!</p>
         <HeroBtn>
           Learn More
         </HeroBtn>

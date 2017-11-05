@@ -1,5 +1,4 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import { Hero, RewardsCard } from "../components";
 import reward1 from '../images/reward-1.png'
 import reward2 from '../images/reward-2.png'
@@ -42,7 +41,7 @@ const rewards = () => {
 const Rewards = props => {
   return (
     <div>
-      <Hero/>
+      <Hero points={870}/>
       <div className="rewards-wrapper">
         {rewards()}
       </div>
