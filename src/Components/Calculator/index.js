@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, FormGroup, ControlLabel, FormControl, Button, Tabs, Tab } from 'react-bootstrap';
+import { Row, Col, Form, FormGroup, ControlLabel, FormControl, Button, Tab } from 'react-bootstrap';
 import './styles.css';
+import Slider from 'react-rangeslider';
+import 'react-rangeslider/lib/index.css';
 
-// Using an ES6 transpiler like Babel
-import Slider from 'react-rangeslider'
+// {
+// 	"balance": 100,
+// 	"interest_interest_rate": 10,
+// 	"total_months": 2
+// }
 
-// To include the default styles
-import 'react-rangeslider/lib/index.css'
+// {
+// 	"balance": 100,
+// 	"interest_interest_rate": 10,
+// 	"monthly_payment": 50.00
+// }
 
 const FormGroupInstance = (props) => {
   return (
@@ -43,8 +51,9 @@ class FormInstance extends Component {
     super(props);
     this.state = {
       balance: 10,
-      rate: 10,
-      payment: 10
+      interest_rate: 10,
+      total_months: 10,
+      monthly_payment: 20
     }
     this.handleChange = this.handleChange.bind(this);
   }
@@ -57,14 +66,14 @@ class FormInstance extends Component {
   render () {
     
     return (
-      <Form horizontal>
+      <Form horizontal onSubmit={(e) => this.props.handleSubmit(e, this.props.month)}>
         <FormGroupInstance label={'Current loan balance ($)'} name={'balance'} value={this.state.balance} handleChange={this.handleChange} />
-        <FormGroupInstance label={'Annual percentage rate (0% to 40%)'} name={'rate'} value={this.state.rate} handleChange={this.handleChange} />
-        <FormGroupInstance label={'Current monthly payment ($)'} name={'payment'} value={this.state.payment} handleChange={this.handleChange} />
+        <FormGroupInstance label={'Annual percentage interest_rate (0% to 40%)'} name={'interest_rate'} value={this.state.interest_rate} handleChange={this.handleChange} />
+        <FormGroupInstance label={'Current monthly payment ($)'} name={this.props.month} value={this.state[this.props.month]} handleChange={this.handleChange} />
 
         <FormGroup>
           <Col xs={4} className='submit'>
-            <Button type="submit" bsStyle="primary">
+            <Button type="submit" bsStyle="primary" >
               Calculate
             </Button>
           </Col>
@@ -74,17 +83,4 @@ class FormInstance extends Component {
   }
 }
 
-const TabsInstance = (props) => {
-  return (
-    <Tabs defaultActiveKey={1} id="Calculator">
-      <Tab eventKey={1} title="Tab 1">
-        <FormInstance />
-      </Tab>
-      <Tab eventKey={2} title="Tab 2">Tab 2 content</Tab>
-      <Tab eventKey={3} title="Tab 3">Tab 3 content</Tab>
-    </Tabs>
-  );
-}
-
-
-export default TabsInstance;
+export default FormInstance;

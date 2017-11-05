@@ -1,0 +1,32 @@
+#Calculator {
+  font-size: 1.2em; }
+  #Calculator .form-group {
+    padding: 0.5em; }
+  #Calculator .nav.nav-tabs {
+    padding: 2em 2em 0 2em; }
+  #Calculator .form-horizontal {
+    padding: 2em; }
+  #Calculator .submit {
+    float: right; }
+
+.footer-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999; }
+
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  align-items: center; }
+
+.footer-btn-text {
+  margin: 0;
+  font-size: 12px; }
+
+.footer-btn-active {
+  background-color: #2a6497;
+  color: #fff; }
