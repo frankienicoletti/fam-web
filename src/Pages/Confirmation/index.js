@@ -15,7 +15,6 @@ class Confirmation extends Component {
   }
 
   render() {
-    console.log('Confirmation:\n', this.props);
     return (
       <Row className="confirmation-page">
         {this.state.showModal &&

@@ -21,8 +21,8 @@ const FooterBtn = props => {
 const Footer = props => {
   return (
     <Row className="footer-btn-wrapper">
-      <FooterBtn to="/accounts" icon="fa-bars"/>
-      <FooterBtn to="/calculator" icon="fa-money"/>
+      <FooterBtn to="/accounts" icon="fa-money"/>
+      <FooterBtn to="/calculator" icon="fa-calculator"/>
       <FooterBtn to="/rewards" icon="fa-trophy"/>
     </Row>
   );
