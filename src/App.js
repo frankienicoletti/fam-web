@@ -1,20 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
+import { Title, Footer } from './components';
+import {
+  BrowserRouter,
+  Route,
+  withRouter
+} from 'react-router-dom'
+// pages
+import Accounts from './Pages/Accounts';
+import Statements from './Pages/Statements';
+import Rewards from './Pages/Rewards';
+import Settings from './Pages/Settings';
+import Confirmation from './Pages/Confirmation/index';
+
+const TitleWithProps = withRouter(Title);
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <BrowserRouter>
+        <div className="app container">
+          <div className="modal-hook"/>
+          <div className="app-header">
+            <TitleWithProps/>
+          </div>
+          <Row className="app-body">
+            <Col xs={12} className="app-body-wrapper">
+              <Route exact path="/" component={Confirmation}/>
+              <Route path="/account" component={Accounts}/>
+              <Route path="/accounts" component={Accounts}/>
+              <Route path="/statements" component={Statements}/>
+              <Route path="/settings" component={Settings}/>
+              <Route path="/rewards" component={Rewards}/>
+              <Route path="/confirmation" component={Confirmation}/>
+            </Col>
+          </Row>
+          <div className="app-footer">
+            <Footer/>
+          </div>
+        </div>
+      </BrowserRouter>
     );
   }
 }

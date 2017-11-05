@@ -1,0 +1,38 @@
+.rewards-modal {
+  width: 100%;
+  margin: 20px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #00b6ff; }
+
+.rewards-modal-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center; }
+
+.rewards-congratulations {
+  font-size: 30px;
+  color: gold;
+  text-align: center; }
+
+.modal-checklist {
+  color: #00ff21;
+  margin: 5px 0; }
+  .modal-checklist .fa {
+    font-size: 20px; }
+
+.checklist-text {
+  font-size: 17px;
+  padding-left: 5px;
+  color: #fff;
+  font-weight: 200; }
+
+.rewards-button-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .rewards-button-group button {
+    width: 45%;
+    margin-top: 50px; }
+  .rewards-button-group button a {
+    color: #fff; }

@@ -3,7 +3,8 @@
   background-color: #428bca;
   color: #fff;
   font-size: 1.2em;
-  text-align: center; }
+  text-align: center;
+  height: 50px; }
   .Title .back {
     float: left;
     line-height: inherit; }
@@ -11,4 +12,5 @@
     float: right;
     line-height: inherit; }
   .Title .content {
+    text-transform: capitalize;
     display: inline; }

@@ -4,7 +4,8 @@
   color: #fff;
   font-size: 1.2em;
   text-align: center;
-  
+  height: 50px;
+
   .back {
     float: left;
     line-height: inherit;
@@ -16,6 +17,7 @@
   }
 
   .content {
+    text-transform: capitalize;
     display: inline;
   }
 }

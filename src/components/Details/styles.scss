@@ -7,11 +7,15 @@
 .details-wrapper {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   border-bottom: 1px solid #999;
+  min-height: 65px;
+}
+
+.details-paid {
+  color: green;
 }
 
 .details-right-section {
-  display: flex;
-  justify-content: flex-end;
+  text-align: right;
 }

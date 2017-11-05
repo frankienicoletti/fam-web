@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 import './style.css';
 
-export default (props) => {
+export default props => {
   return (
-      <div className="Subtitle">
-        <p className="content">{props.rewards}</p>
-      </div>
+    <Row className="Subtitle no-margin">
+      <Col xs={12}>
+        <p className="content">{props.subtitle}</p>
+      </Col>
+    </Row>
   )
 };
