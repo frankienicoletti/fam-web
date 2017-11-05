@@ -3,6 +3,7 @@
 .app,
 body {
   height: 100vh; }
+
 p {
   font-size: 15px; }
 
@@ -28,4 +29,3 @@ p {
   margin: 0 auto;
   justify-content: center;
   align-items: center; }
-
