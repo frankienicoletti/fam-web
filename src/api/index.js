@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 const API = '/launchers';
 
 // Returns an account.
@@ -23,13 +21,12 @@ const getAccountTransactions = id => {
 };
 
 // Returns payoff data from the API
-const payoff = (body) => {
-  return axios
-    .post(`${API}/payoff`, { ...body })
-    .then(function (response) {
-      console.log(response);
-      return response;
-    })
+const payoff = (id, body) => {
+  return fetch(`${API}/${id}/payoff`, {
+    method: 'post',
+    body: JSON.stringify(body)
+  }).then(res => res.json())
+    .then(json => json)
     .catch(function (error) {
       console.log(error, ' Error getting account try again, or just give up...');
     });

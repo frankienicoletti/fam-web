@@ -4,7 +4,7 @@ import Calculator from "../components/Calculator";
 export const Calc = props => {
   return (
     <div className="balances-page">
-      <Calculator />
+      <Calculator {...props}/>
     </div>
   );
 };

@@ -75,7 +75,9 @@ class App extends Component {
                   />
                 )
               }}/>
-              <Route path="/calculator" component={Calculator}/>
+              <Route exact path='/calculator' render={(props) => {
+                return <Calculator {...props} userId={this.state.appState.userId}/>
+              }}/>
               <Route path="/rewards" component={Rewards}/>
             </Col>
           </Row>
