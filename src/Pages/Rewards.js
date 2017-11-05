@@ -4,7 +4,7 @@ import reward1 from '../images/reward-1.png'
 import reward2 from '../images/reward-2.png'
 import reward3 from '../images/reward-3.png'
 import reward4 from '../images/reward-4.png'
-import { TriviaModal } from "../components";
+
 
 const rewards = () => {
   return [
@@ -14,7 +14,6 @@ const rewards = () => {
       content="Streak Freeze allows you to stay in place for one full day of inactivity"
       amount={200}
       image={reward1}
-      trivia={TriviaModal}
     />,
     <RewardsCard
       key={2}
@@ -22,7 +21,6 @@ const rewards = () => {
       content="Streak Freeze allows you to stay in place for one full day of inactivity"
       amount={300}
       image={reward2}
-      trivia={TriviaModal}
     />,
     <RewardsCard
       key={3}
@@ -30,7 +28,6 @@ const rewards = () => {
       content="Streak Freeze allows you to stay in place for one full day of inactivity"
       amount={400}
       image={reward3}
-      trivia={TriviaModal}
     />,
     <RewardsCard
       key={4}
@@ -38,7 +35,6 @@ const rewards = () => {
       content="Streak Freeze allows you to stay in place for one full day of inactivity"
       amount={500}
       image={reward4}
-      trivia={TriviaModal}
     />,
   ]
 };
