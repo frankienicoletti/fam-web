@@ -1,0 +1,18 @@
+.rewards-card {
+  border-bottom: 1px solid #999;
+  padding: 20px; }
+
+.rewards-title {
+  font-size: 600; }
+
+.rewards-content {
+  font-weight: 200; }
+
+.rewards-card-button {
+  width: 100%;
+  background: transparent;
+  color: #00b6ff;
+  border-color: #00b6ff;
+  border-radius: 40px; }
+  .rewards-card-button:hover, .rewards-card-button:active, .rewards-card-button:focus {
+    background: transparent; }

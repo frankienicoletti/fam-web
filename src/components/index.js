@@ -9,8 +9,12 @@ import Redeem from './Redeem';
 import StatementButtons from './StatementButtons';
 import Subtitle from './Subtitle';
 import Title from './Title';
+import RewardsCard from './RewardsCard';
+import Hero from './Hero';
 
 export {
+  Hero,
+  RewardsCard,
   Balance,
   Block,
   Details,
