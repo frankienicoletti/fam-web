@@ -29,7 +29,7 @@ const rewards = () => {
       image={reward3}
     />,
     <RewardsCard
-      key={3}
+      key={4}
       title="PSN Gift Card"
       content="Redeem your reward points today. Get your Starbucks amazon card worth $50.00"
       amount={4000}
