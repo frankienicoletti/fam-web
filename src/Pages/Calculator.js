@@ -1,8 +1,12 @@
 import React from 'react';
-import { Calculator } from "../components";
+import Calculator from "../components/Calculator";
 
-export default (props) => {
+export const Calc = props => {
   return (
-    <Calculator />
+    <div className="balances-page">
+      <Calculator />
+    </div>
   );
 };
+
+export default Calc;
