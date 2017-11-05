@@ -1,12 +1,12 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import Hero from "../components/Hero";
 
-const Rewards = subtitle => props => {
+const Rewards = props => {
   return (
-    <Row>
-      <Col>
-      </Col>
-    </Row>
+    <div>
+      <Hero/>
+    </div>
   );
 };
 
