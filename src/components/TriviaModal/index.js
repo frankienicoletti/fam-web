@@ -199,7 +199,7 @@ class TriviaModal extends Component {
             onClick={this.props.closeModal}
           >
             <p className="correct-answer">You answered {this.state.correctAnswers}
-               questions correctly!
+              {` `} questions correctly!
             </p>
             {this.state.correctAnswers > 0 &&
             <p>you earned {this.state.correctAnswers * 20} points</p>}
